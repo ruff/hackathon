@@ -75,6 +75,7 @@ table {
 	font-weight: bold;
 }
 #container #results {
+	display: none;
 	padding: 20px;
 	font-weight: bold;
 }
