@@ -1,9 +1,5 @@
-from flask import Flask
-import json
-import demjson
 import httplib
-
-app = Flask(__name__)
+import demjson
 
 def pull_maps(saddr, daddr):
     conn = httplib.HTTPConnection("maps.google.com")
@@ -12,21 +8,3 @@ def pull_maps(saddr, daddr):
     def removeNonAscii(s): return "".join(filter(lambda x: ord(x)<128, s))
     r_fixed = removeNonAscii(r[9:]) # remove TM chars, remove front while(1);
     js = demjson.decode(r_fixed)
-
-
-
-
-    
-
-
-
-@app.route("/", methods=['GET'])
-def hello():
-    ret = {}
-    return json.dumps(ret)
-
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
