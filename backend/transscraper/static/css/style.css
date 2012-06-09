@@ -58,11 +58,8 @@ table {
 	text-align: center;
 	font-family: Helvetica,Arial,Sans-serif;
 }
-#container #heading {
-	font-size: 35px;
-	font-weight: bold;
-	margin: 20px;
-}
+#container #heading { font-size: 35px; font-weight: bold; margin: 20px; }
+#container #heading img { height: 50px; }
 #container #search {}
 #container #search .search-row { position: relative; }
 #container #search .search-row > * { vertical-align: middle; }
@@ -76,9 +73,6 @@ table {
 	font-weight: bold;
 }
 #container #search .search-row .search-image { position: absolute; height: 30px; top: 15px; }
-#container #results {
-	display: none;
-	padding: 20px;
-	font-weight: bold;
-}
+#container #search .search-actions button { font-weight: bold; }
+#container #results { display: none; padding: 20px; font-weight: bold; }
 #container #results .result-row { padding: 5px; }

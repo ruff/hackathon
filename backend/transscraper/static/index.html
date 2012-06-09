@@ -7,7 +7,10 @@
 </head>
 <body>
 	<div id="container">
-		<div id="heading">TransScraper</div>
+		<div id="heading">
+			<img src="img/logo.png" alt="logo" />
+			<span>TransScraper</span>
+		</div>
 		
 		<form id="searchform" action="/api" method="post">
 			<div id="search">
@@ -31,11 +34,11 @@
 					<input type="text" id="carmodel" name="carmodel" class="search-input" placeholder="Car model" />
 					<img src="img/model.png" alt="car model" class="search-image" />
 				</div>
-			</div>
-			
-			<div>
-				<button type="submit" id="submit" class="btn">Submit</button>
-				<button type="button" id="clear" class="btn">Clear</button>
+				
+				<div class="search-actions">
+					<button type="submit" id="submit" class="btn btn-success">Submit</button>
+					<button type="button" id="clear" class="btn">Clear</button>
+				</div>
 			</div>
 		</form>
 		
