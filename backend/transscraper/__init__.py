@@ -9,7 +9,7 @@ from transscraper.structure import Response,Parsed_Request
 app = Flask(__name__)
 
 @app.route("/api", methods=['GET','POST'])
-def get_data():
+def api():
     parsed_request = Parsed_Request()
     
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def get_data():
 
 
 @app.route("/get_request_sample", methods=['GET','POST'])
-def get_request_type():
+def get_request_sample():
     parsed_request = Parsed_Request()
     return jsonpickle.encode(parsed_request)
 
