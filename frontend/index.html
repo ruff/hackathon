@@ -3,12 +3,13 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>TransScraper</title>
 </head>
 <body>
 	<div id="container">
 		<div id="heading">TransScraper</div>
 		
-		<form action="" method="post">
+		<form action="/api" method="post">
 			<div id="search">
 				<div class="search-row">
 					<input type="text" id="saddr" name="saddr" class="search-input" placeholder="Leaving from..." />
@@ -38,9 +39,9 @@
 			<div id="fuel-cost" class="result-row"></div>
 			<div id="transit-time" class="result-row"></div>
 			<div id="landmarks" class="result-row"></div>
-			<div id="saddr" class="result-row"></div>
+			<div id="source-address" class="result-row"></div>
 			<div id="drive-time" class="result-row"></div>
-			<div id="daddr" class="result-row"></div>
+			<div id="destination-address" class="result-row"></div>
 			<div id="parking-price" class="result-row"></div>
 			<div id="drive-co2" class="result-row"></div>
 			<div id="transit-price" class="result-row"></div>

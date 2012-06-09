@@ -30,9 +30,9 @@ $(function() {
 			$('#fuel-cost').html(response.fuel_cost);
 			$('#transit-time').html(response.transit_time);
 			$('#landmarks').html(response.landmarks[0]);
-			$('#saddr').html(response.start_address);
+			$('#source-address').html(response.start_address);
 			$('#drive-time').html(response.drive_time);
-			$('#daddr').html(response.destination_address);
+			$('#destination-address').html(response.destination_address);
 			$('#parking-price').html(response.parking_price);
 			$('#drive-co2').html(response.drive_co2);
 			$('#transit-price').html(response.transit_price);
