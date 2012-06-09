@@ -14,7 +14,7 @@ class Response:
        self.transit_price = 400
 
 
-class Request :
+class Parsed_Request :
     'Request'
     def __init__(self):
         self.start_address = "2900 West Plano Parkway Plano, Texas 75075"
