@@ -16,7 +16,7 @@ $(function() {
 			'number_people': $('#numpeople').val()
 		};
 		
-		$.GET(
+		$.get(
 			'/api',
 			request,
 			function(response) {
