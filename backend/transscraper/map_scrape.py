@@ -27,4 +27,4 @@ def pull_transit_time(saddr, daddr):
     i = time_idx - 1
     while (js['panel'][i].isdigit()):
         i = i - 1
-    return int(js['panel'][i+1:time_idx]) 
+    return 60*int(js['panel'][i+1:time_idx]) 
