@@ -4,12 +4,11 @@ class Response:
        self.saddr = 'Start address'
        self.daddr = 'End address'
        self.mpg = 16
-
-    #fuel_cost: 1756 // cents
-    #landmarks: ["DMA", "Nasher", "etc"]
-    #parking_price: 5
-    #drive_time: 50 // minutes
-    #transit_time: 60 // minutes
-    #weather_condition: "101 F 20% chance of rain"
-    #drive_co2: 5 // tons
-    #transit_price: 400 // cents = 0
+       self.fuel_cost = 1756
+       self.landmarks =["DMA", "Nasher", "etc"]
+       self.parking_price = 5
+       self.drive_time = 50
+       self.transit_time = 60
+       self.weather_condition = '101 F 20% chance of rain'
+       self.drive_co2 = 5
+       self.transit_price = 400
