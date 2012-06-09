@@ -5,6 +5,8 @@ from flask import request
 
 
 from transscraper.structure import Response,Parsed_Request
+from transscraper.map_api import pull_car_miles_and_time,pull_bus_transit_time 
+from transscraper.gas_scrape import pull_gas_price
 
 app = Flask(__name__)
 
@@ -26,8 +28,9 @@ def api():
         parsed_request.car_model = request.args.get('car_model', '')
 
     response = Response()
-    response.start_address = parsed_request.start_address;
-    response.destination_address = parsed_request.destination_address;
+    response.start_address = parsed_request.start_address
+    response.destination_address = parsed_request.destination_address
+    response.fuel_cost = pull_gas_price()
 
     return jsonpickle.encode(response)
 
