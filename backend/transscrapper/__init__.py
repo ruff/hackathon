@@ -32,7 +32,7 @@ def get_data():
     return jsonpickle.encode(response)
 
 
-@app.route("/get_request_type", methods=['GET','POST'])
+@app.route("/get_request_sample", methods=['GET','POST'])
 def get_request_type():
     parsed_request = Parsed_Request()
     return jsonpickle.encode(parsed_request)
