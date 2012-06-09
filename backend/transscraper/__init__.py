@@ -4,7 +4,7 @@ import jsonpickle
 from flask import request
 
 
-from transscrapper.structure import Response,Parsed_Request
+from transscraper.structure import Response,Parsed_Request
 
 app = Flask(__name__)
 
