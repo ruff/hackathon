@@ -51,3 +51,31 @@ table {
 
 /* MAIN */
 
+#container {
+	width: 800px;
+	margin: 0px auto;
+	padding: 50px 0px;
+	text-align: center;
+	font-family: Helvetica,Arial,Sans-serif;
+}
+#container #heading {
+	font-size: 35px;
+	font-weight: bold;
+	margin: 20px;
+}
+#container #search {}
+#container #search .search-row {}
+#container #search .search-row .search-input {
+	margin: 5px;
+	padding-left: 5px;
+	height: 40px;
+	width: 500px;
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+}
+#container #results {
+	padding: 20px;
+	font-weight: bold;
+}
+#container #results .result-row { padding: 5px; }

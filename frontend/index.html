@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-
-	<input type="text" name="" />
+	<div id="container">
+		<div id="heading">TransScraper</div>
+		
+		<form action="" method="post">
+			<div id="search">
+				<div class="search-row">
+					<input type="text" name="saddr" class="search-input" placeholder="Leaving from..." />
+				</div>
+				<div class="search-row">
+					<input type="text" name="daddr" class="search-input" placeholder="Ending at..." />
+				</div>
+				<div class="search-row">
+					<input type="text" name="numpeople" class="search-input" placeholder="Number of people" />
+				</div>
+				<div class="search-row">
+					<input type="text" name="carmake" class="search-input" placeholder="Car make" />
+				</div>
+				<div class="search-row">
+					<input type="text" name="carmodel" class="search-input" placeholder="Car model" />
+				</div>
+			</div>
+			
+			<div>
+				<button type="submit" id="submit" class="btn">Submit</button>
+				<button type="submit" id="clear" class="btn">Clear</button>
+			</div>
+		</form>
+		
+		<div id="results">
+			<div id="mpg" class="result-row"></div>
+			<div id="fuel-cost" class="result-row"></div>
+			<div id="transit-time" class="result-row"></div>
+			<div id="landmarks" class="result-row"></div>
+			<div id="daddr" class="result-row"></div>
+			<div id="drive-time" class="result-row"></div>
+			<div id="saddr" class="result-row"></div>
+			<div id="parking-price" class="result-row"></div>
+			<div id="drive-co2" class="result-row"></div>
+			<div id="transit-price" class="result-row"></div>
+			<div id="weather-condition" class="result-row"></div>
+		</div>
+	</div>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="/script.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/transscraper.js"></script>
 </body>
 </html>
