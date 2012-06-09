@@ -1,8 +1,8 @@
 class Response:
    'Response'
    def __init__(self):
-       self.saddr = '2900 West Plano Parkway Plano, Texas 75075'
-       self.daddr = '2900 West Plano Parkway Plano, Texas 75075'
+       self.start_address = '2900 West Plano Parkway Plano, Texas 75075'
+       self.destination_address = '2900 West Plano Parkway Plano, Texas 75075'
        self.mpg = 16
        self.fuel_cost = 1756
        self.landmarks =["DMA", "Nasher"]
@@ -14,11 +14,11 @@ class Response:
        self.transit_price = 400
 
 
-class Resquest :
+class Request :
     'Request'
     def __init__(self):
-        self.saddr = "2900 West Plano Parkway Plano, Texas 75075"
-        self.daddr = "2900 West Plano Parkway Plano, Texas 75075"
-        self.numpeople = 3
-        self.carmake = "WMB"
-        self.carmodel = "5X"
+        self.start_address = "2900 West Plano Parkway Plano, Texas 75075"
+        self.destination_address = "2900 West Plano Parkway Plano, Texas 75075"
+        self.number_people = 3
+        self.car_make = "WMB"
+        self.car_model = "5X"
