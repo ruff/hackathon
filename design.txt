@@ -1,0 +1,53 @@
+Page
+
+ - Start address * 
+ - Destination *
+ - Number of people 
+ - Make/model of car
+
+Params
+ - saddr
+ - daddr
+ - numpeople
+ - carmake
+ - carmodel
+
+Process
+
+ - Time public transit (travel time) 
+ - Weather for that day
+ - Mpg of the car
+ - Cost of transit ticket 
+ - Landmarks at destination
+ - Parking lot density at destination
+ - Time for drive/transit
+
+{
+    saddr: "Start address"
+    daddr: "End address"           
+    mpg: 16 
+    fuel_cost: 1756 // cents
+    landmarks: ["DMA", "Nasher", "etc"]
+    parking_price: 5
+    drive_time: 50 // minutes
+    transit_time: 60 // minutes
+    weather_condition: "101 F 20% chance of rain"
+    drive_co2: 5 // tons
+    transit_price: 400 // cents
+}
+
+Display
+
+ - Cost and time to drive (link) *
+ - Cost and time to transit (link) *
+  - Weather
+  -  walking distance 
+  - CO2 emissions saved
+ - Landmarks at destination
+ - Bar graph
+  - Time
+  - Cost
+  - Greenness
+
+Services
+ 
