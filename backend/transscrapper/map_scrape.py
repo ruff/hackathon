@@ -1,7 +1,7 @@
 import httplib
 import demjson
 
-def pull_maps(saddr, daddr):
+def pull_transit_time(saddr, daddr):
     conn = httplib.HTTPConnection("maps.google.com")
     params = 
     {
@@ -24,5 +24,7 @@ def pull_maps(saddr, daddr):
     r_fixed = removeNonAscii(r[9:]) # remove TM chars, remove front while(1);
     js = demjson.decode(r_fixed)
     time_idx = js['panel'].find(" mins")
-    
-    return {}
+    i = time_idx - 1
+    while (js['panel'][i].isdigit())
+        i = i - 1
+    return int(js['panel'][i+1:time_idx]) 
