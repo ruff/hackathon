@@ -10,4 +10,4 @@ def pull_gas_price():
     s = r[i:i+100]
     j = s.find("<h2>")
     e = s.find("</h2>")
-    return s[j+4:e]
+    return int(float(s[j+4:e])*100)
