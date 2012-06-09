@@ -30,7 +30,16 @@ def api():
     response = Response()
     response.start_address = parsed_request.start_address
     response.destination_address = parsed_request.destination_address
+
     response.fuel_cost = pull_gas_price()
+    response.transit_time = pull_bus_transit_time(parsed_request);
+
+    (car_miles, response.drive_time) = pull_car_miles_and_time(parsed_request);
+    response.landmarks =["DMA", "Nasher"]
+    response.parking_price = 5
+    response.weather_condition = '101 F, 20% chance of rain'
+    response.drive_co2 = 5
+    response.transit_price = 400
 
     return jsonpickle.encode(response)
 
