@@ -74,3 +74,8 @@ table {
 	font-size: 24px;
 	font-weight: bold;
 }
+#container #results {
+	padding: 20px;
+	font-weight: bold;
+}
+#container #results .result-row { padding: 5px; }
