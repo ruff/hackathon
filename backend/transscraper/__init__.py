@@ -8,6 +8,7 @@ from transscraper.structure import Response,Parsed_Request
 from transscraper.map_api import pull_car_miles_and_time,pull_bus_transit_time 
 from transscraper.gas_scrape import pull_gas_price
 from transscraper.weather_api import weather_as_string
+from transscraper.parking_api import pull_parking_cost
 
 
 app = Flask(__name__)
@@ -37,9 +38,9 @@ def api():
     response.transit_time = pull_bus_transit_time(parsed_request)
     response.weather_condition = weather_as_string(parsed_request)
     (car_miles, response.drive_time) = pull_car_miles_and_time(parsed_request)
+    response.parking_price = pull_parking_cost(parsed_request)
     
     response.landmarks =["DMA", "Nasher"]
-    response.parking_price = 5
     response.drive_co2 = 5
     response.transit_price = 4
 

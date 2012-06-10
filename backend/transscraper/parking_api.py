@@ -14,8 +14,8 @@ def geocode(addr):
     loc = js['results'][0]['geometry']['location']
     return "%f,%f" % (loc['lat'], loc['lng'])
 
-def pull_parking_cost(location):
-    gc = geocode(location)
+def pull_parking_cost(request):
+    gc = geocode(request.destination_address)
 
     conn = httplib.HTTPSConnection("maps.googleapis.com")
     params = {
