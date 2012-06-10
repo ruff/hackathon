@@ -1,7 +1,7 @@
 
 $(function() {
 
-	var testMode = true;
+	var testMode = false;
 	
 	$('#results').hide();
 	
