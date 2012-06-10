@@ -32,7 +32,7 @@ def pull_parking_cost(request):
     js = demjson.decode(r)
 
     if (len(js['results']) > 5):
-        return 500
+        return 5
     else:
         return 0
     
