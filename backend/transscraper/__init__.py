@@ -54,7 +54,12 @@ def api():
     
     response.landmarks =["Museum", "Big Central Park"]
     response.transit_price = 4
-
+    
+    response.drive_time = float(response.drive_time) / float(60)
+    response.transit_time = float(response.transit_time) / float(60)
+    
+    response.savings = float(response.fuel_cost) + float(response.parking_price) - float(parsed_request.number_people) * float(response.transit_price);
+    
     return jsonpickle.encode(response)
 
 
