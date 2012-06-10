@@ -1,7 +1,7 @@
 
 $(function() {
 
-	var testMode = false;
+	var testMode = true;
 	
 	$('#results').hide();
 	
@@ -17,7 +17,7 @@ $(function() {
 		if (testMode) {
 			var response = {
 				'mpg': 16,
-				'fuel_cost': 1756,
+				'fuel_cost': 17.56,
 				'transit_time': 60,
 				'landmarks': ['DMA', 'Nasher'],
 				'start_address': '2900 West Plano Parkway Plano, Texas 75075',
@@ -26,7 +26,8 @@ $(function() {
 				'parking_price': 5,
 				'drive_co2': 5,
 				'transit_price': 400,
-				'weather_condition': '101 F, 20% chance of rain'
+				'weather_condition': '101 F, 20% chance of rain',
+				'savings': 30
 			};
 			
 			renderResponse(response);
@@ -49,19 +50,28 @@ $(function() {
 		}
 		
 		function renderResponse(response) {
-			$('#mpg').html(response.mpg);
-			$('#fuel-cost').html(response.fuel_cost);
-			$('#transit-time').html(response.transit_time);
+			$('#mpg').html(response.mpg + ' MPG');
+			$('#fuel-cost').html('$' + response.fuel_cost);
+			$('#transit-time').html(response.transit_time + ' minutes');
 			$('#landmarks').html(response.landmarks[0]);
 			$('#source-address').html(response.start_address);
-			$('#drive-time').html(response.drive_time);
+			$('#drive-time').html(response.drive_time + ' minutes');
 			$('#destination-address').html(response.destination_address);
-			$('#parking-price').html(response.parking_price);
-			$('#drive-co2').html(response.drive_co2);
-			$('#transit-price').html(response.transit_price);
+			$('#parking-price').html('$' + response.parking_price);
+			$('#drive-co2').html(response.drive_co2 + ' lbs');
+			$('#transit-price').html('$' + response.transit_price);
 			$('#weather-condition').html(response.weather_condition);
+			$('#savings').html('$' + response.savings);
 			
 			$('#results').fadeIn('fast');
+			
+			$('#donate').hide();
+			response.savings = 30;
+			
+			if (response.savings > 0) {
+				$('#donate').fadeIn('slow');
+			}
+			
 			scrollBottom();
 		}
 		

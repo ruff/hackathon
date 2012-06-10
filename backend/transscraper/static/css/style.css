@@ -82,4 +82,5 @@ table {
 #container #results .result-row { padding: 5px; margin-left: 115px; }
 #container #results .result-row .result-label { float: left; height: 20px; width: 150px; text-align: left; }
 #container #results .result-row .result-value { float: left; margin-left: 30px; }
-
+#container #results #donate { margin-top: 20px; }
+#container #results #donate #donate-label { margin: 5px; color: #11ab46; }
