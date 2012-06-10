@@ -3,6 +3,8 @@ $(function() {
 
 	var testMode = true;
 	
+	$('#results').hide();
+	
 	$('#clear').click(function(e) {
 		e.preventDefault();
 		$('input[type="text"]').val('');
@@ -59,7 +61,12 @@ $(function() {
 			$('#transit-price').html(response.transit_price);
 			$('#weather-condition').html(response.weather_condition);
 			
-			$('#results').hide().fadeIn('fast');
+			$('#results').fadeIn('fast');
+			scrollBottom();
+		}
+		
+		function scrollBottom() {
+			$('html, body').animate({ scrollTop: $("#results").offset().top }, 500);
 		}
 	});
 });
