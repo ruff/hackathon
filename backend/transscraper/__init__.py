@@ -40,6 +40,9 @@ def api():
     (car_miles, response.drive_time) = pull_car_miles_and_time(parsed_request)
     response.parking_price = pull_parking_cost(parsed_request)
     
+    mpg = find_mpg(parsed_request)
+    
+    response.mpg = mpg
     response.landmarks =["DMA", "Nasher"]
     response.drive_co2 = 5
     response.transit_price = 4
