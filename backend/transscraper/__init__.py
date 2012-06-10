@@ -39,7 +39,7 @@ def api():
     response.transit_time = pull_bus_transit_time(parsed_request)
     response.weather_condition = weather_as_string(parsed_request)
     (car_miles, response.drive_time) = pull_car_miles_and_time(parsed_request)
-    response.parking_price = pull_parking_cost(parsed_request)
+    response.parking_price = float(pull_parking_cost(parsed_request))/100 + 10
     
     mpg = find_mpg(parsed_request)
     
