@@ -6,7 +6,7 @@ from flask import request
 
 from transscraper.structure import Response,Parsed_Request
 from transscraper.map_api import pull_car_miles_and_time,pull_bus_transit_time 
-from transscraper.gas_scrape import pull_gas_price
+from transscraper.gas_api import pull_gas_price
 from transscraper.weather_api import weather_as_string
 from transscraper.parking_api import pull_parking_cost
 
