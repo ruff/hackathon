@@ -25,7 +25,7 @@ $(function() {
 				'destination_address': '2900 West Plano Parkway Plano, Texas 75075',
 				'parking_price': 5,
 				'drive_co2': 5,
-				'transit_price': 400,
+				'transit_price': 4.00,
 				'weather_condition': '101 F, 20% chance of rain',
 				'savings': 30
 			};
@@ -51,22 +51,27 @@ $(function() {
 		
 		function renderResponse(response) {
 			$('#mpg').html(response.mpg + ' MPG');
-			$('#fuel-cost').html('$' + response.fuel_cost);
+			$('#fuel-cost').html('$' + response.fuel_cost.toFixed(2));
 			$('#transit-time').html(response.transit_time + ' minutes');
 			$('#landmarks').html(response.landmarks[0]);
 			$('#source-address').html(response.start_address);
 			$('#drive-time').html(response.drive_time + ' minutes');
 			$('#destination-address').html(response.destination_address);
-			$('#parking-price').html('$' + response.parking_price);
+			$('#parking-price').html('$' + response.parking_price.toFixed(2));
 			$('#drive-co2').html(response.drive_co2 + ' lbs');
-			$('#transit-price').html('$' + response.transit_price);
+			$('#transit-price').html('$' + response.transit_price.toFixed(2));
 			$('#weather-condition').html(response.weather_condition);
-			$('#savings').html('$' + response.savings);
+			
+			if (response.savings > 0) {
+				$('#savings').html('$' + response.savings.toFixed(2));
+			}
+			else {
+				$('#savings').html('-$' + (-response.savings.toFixed(2)));
+			}
 			
 			$('#results').fadeIn('fast');
 			
 			$('#donate').hide();
-			response.savings = 30;
 			
 			if (response.savings > 0) {
 				$('#donate').fadeIn('slow');
