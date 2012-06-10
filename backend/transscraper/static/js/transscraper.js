@@ -18,7 +18,7 @@ $(function() {
 			var response = {
 				'mpg': 16,
 				'fuel_cost': 17.56,
-				'transit_time': 60,
+				'transit_time': 60.3333,
 				'landmarks': ['DMA', 'Nasher'],
 				'start_address': '2900 West Plano Parkway Plano, Texas 75075',
 				'drive_time': 50,
@@ -52,10 +52,10 @@ $(function() {
 		function renderResponse(response) {
 			$('#mpg').html(response.mpg + ' MPG');
 			$('#fuel-cost').html('$' + response.fuel_cost.toFixed(2));
-			$('#transit-time').html(response.transit_time + ' minutes');
+			$('#transit-time').html(response.transit_time.toFixed(0) + ' minutes');
 			$('#landmarks').html(response.landmarks[0]);
 			$('#source-address').html(response.start_address);
-			$('#drive-time').html(response.drive_time + ' minutes');
+			$('#drive-time').html(response.drive_time.toFixed(0) + ' minutes');
 			$('#destination-address').html(response.destination_address);
 			$('#parking-price').html('$' + response.parking_price.toFixed(2));
 			$('#drive-co2').html(response.drive_co2 + ' lbs');
