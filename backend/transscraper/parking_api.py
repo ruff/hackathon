@@ -33,6 +33,6 @@ def pull_parking_cost(request):
 
     if (len(js['results']) > 5):
         return 500
-    else
+    else:
         return 0
     
